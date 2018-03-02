@@ -286,6 +286,7 @@ int check_keys(XEvent *e);
 void physics();
 void render();
 void showName();
+void drawBox(int,int);
 
 //==========================================================================
 // M A I N
@@ -740,8 +741,10 @@ void render()
 {
 	Rect r;
 	glClear(GL_COLOR_BUFFER_BIT);
-	//
+	// Call my own 2 functions
 	showName();
+	drawBox(gl.xres/2,gl.yres/2);
+	//
 	r.bot = gl.yres - 20;
 	r.left = 10;
 	r.center = 0;
