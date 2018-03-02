@@ -24,6 +24,7 @@ using namespace std;
 #include <GL/glx.h>
 #include "log.h"
 #include "fonts.h"
+#include "angelR.cpp"
 
 //defined types
 typedef float Flt;
@@ -284,6 +285,7 @@ void check_mouse(XEvent *e);
 int check_keys(XEvent *e);
 void physics();
 void render();
+void showName();
 
 //==========================================================================
 // M A I N
@@ -739,6 +741,7 @@ void render()
 	Rect r;
 	glClear(GL_COLOR_BUFFER_BIT);
 	//
+	showName();
 	r.bot = gl.yres - 20;
 	r.left = 10;
 	r.center = 0;
